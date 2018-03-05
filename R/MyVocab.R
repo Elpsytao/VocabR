@@ -10,8 +10,6 @@
 #' @param word The checking word, a character.
 #' @param max The maximum number of thesaurus returned
 #' @note should format the output and vectorize the word param
-#' t
-
 
 
 library(RCurl)
@@ -29,7 +27,7 @@ get_thesaurus <- function(word, max = 8L) {
   str_replace(thesaurus, '%20', ' ')[1:max]
 }
 
-get_definition <- function(word, max = 2){
+get_definition <- function(word, max = 2L){
   url <- paste0("http://www.dictionary.com/browse/",word,"?s=t")
   url_content <- read_html(getURL(url))
   content_node <- xml_find_all(url_content, xpath = "//div/div")
