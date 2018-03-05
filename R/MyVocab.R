@@ -10,6 +10,7 @@
 #' @param word The checking word, a character.
 #' @param max The maximum number of thesaurus returned
 #' @note should format the output and vectorize the word param
+#' t
 
 
 
